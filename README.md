@@ -12,7 +12,7 @@ possible only after the value has fallen below **15 knots**.
 1. Install **ntfy** from the iPhone App Store.
 2. Open ntfy and tap `+` to subscribe to a topic.
 3. Choose a long, private topic name, for example
-   `ipsach-wind-leo-7f3x9p`. Anyone who knows a topic name can receive or send
+   `WSA-Ipsach-wind-alert`. Anyone who knows a topic name can receive or send
    messages on that public ntfy topic, so do not use only `Ipsach-wind`.
 4. Allow notifications when iOS asks.
 
@@ -33,7 +33,7 @@ possible only after the value has fallen below **15 knots**.
 1. In the GitHub repository, open **Settings → Secrets and variables → Actions**.
 2. Choose **New repository secret**.
 3. Name it exactly `NTFY_TOPIC`.
-4. Set its value to the same private topic name used in the iPhone app.
+4. Set its value to the same private topic name used in the iPhone app. (Here "WSA-Ipsach-wind-alert")
 
 ## 4. Enable and test it
 
@@ -52,7 +52,7 @@ The normal workflow sends only if the live wind is at least 20 kn. To test the
 iPhone connection independently, open this address in Safari, replacing the
 final part with your topic:
 
-`https://ntfy.sh/YOUR-PRIVATE-TOPIC/publish?message=Test`
+`https://ntfy.sh/WSA-Ipsach-wind-alert/publish?message=Test`
 
 ## Change the limits later
 
