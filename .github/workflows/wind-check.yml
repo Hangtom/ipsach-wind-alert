@@ -22,8 +22,8 @@ jobs:
       - name: Check wind and notify
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          ALERT_THRESHOLD: "20"
-          RESET_THRESHOLD: "15"
+          ALERT_THRESHOLD: "10"
+          RESET_THRESHOLD: "4"
           RESET_MINUTES: "30"
         run: python3 wind_alert.py
 
