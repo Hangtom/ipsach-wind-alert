@@ -24,6 +24,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ALERT_THRESHOLD: "20"
           RESET_THRESHOLD: "15"
+          RESET_MINUTES: "30"
         run: python3 wind_alert.py
 
       - name: Save anti-spam state
