@@ -15,14 +15,15 @@ concurrency:
 jobs:
   check-wind:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Check wind and notify
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        ALERT_THRESHOLD:"20"
-        RESET_THRESHOLD:"15"
+          ALERT_THRESHOLD: "5"
+          RESET_THRESHOLD: "4"
         run: python3 wind_alert.py
 
       - name: Save anti-spam state
