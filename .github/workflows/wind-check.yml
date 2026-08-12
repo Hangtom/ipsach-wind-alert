@@ -21,6 +21,8 @@ jobs:
       - name: Check wind and notify
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        ALERT_THRESHOLD:"20"
+        RESET_THRESHOLD:"15"
         run: python3 wind_alert.py
 
       - name: Save anti-spam state
